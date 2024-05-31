@@ -1,22 +1,31 @@
+/* Global styles for HTML and body */
 html, body {
   margin: 0;
   padding: 0;
   background-color: #2B223D;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Header section with background image */
 .hd{
   background-image: url(img/e231859993c3f02f220f09e628b6d79b.png);
+  
+  /* Define custom font */
   @font-face {
     font-family: 'Major Mono Display';
     src: url('path/to/MajorMonoDisplay-Regular.woff2') format('woff2'), /* Modern Browsers */
          url('path/to/MajorMonoDisplay-Regular.woff') format('woff'); /* Older Browsers */
     font-weight: normal;
     font-style: normal;
+  }
 }
+
+/* Link styles */
 a {
   color: rgb(38, 76, 89);
 }
 
+/* Define custom font again (redundant) */
 @font-face {
   font-family: 'Major Mono Display';
   src: url('path/to/MajorMonoDisplay-Regular.woff2') format('woff2'), /* Modern Browsers */
@@ -25,23 +34,18 @@ a {
   font-style: normal;
 }
 
-
-
-
-}
-
-
+/* Header styling */
 header {
-  background-color: #e0dde2 ;
+  background-color: #e0dde2;
   display: flex;
   width: 100%;
   height: 50vh;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+/* Main heading styling */
 h1 {
   font-family: 'Major Mono Display', monospace;
   color: #e0dde2;
@@ -51,6 +55,8 @@ h1 {
   font-size: 102px;
   padding-top: 190px;
 }
+
+/* Paragraph styling within header */
 .par {
   font-size: 22px;
   font-weight: 520;
@@ -59,8 +65,10 @@ h1 {
   padding-left: 300px;
   padding-right: 300px;
   color: #e0dde2;
+  padding-bottom: 120px;
 }
 
+/* Grid container styling */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Three-column layout */
@@ -69,40 +77,47 @@ h1 {
   max-width: 1200px; /* Limit the width of the grid */
   width: 100%;
   margin: auto;
- @font-face {
-  font-family: 'Major Mono Display';
-  src: url('path/to/MajorMonoDisplay-Regular.woff2') format('woff2'), /* Modern Browsers */
-       url('path/to/MajorMonoDisplay-Regular.woff') format('woff'); /* Older Browsers */
-  font-weight: normal;
-  font-style: normal;}
+
+  /* Define custom font (repeated) */
+  @font-face {
+    font-family: 'Major Mono Display';
+    src: url('path/to/MajorMonoDisplay-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('path/to/MajorMonoDisplay-Regular.woff') format('woff'); /* Older Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
   padding-bottom: 85px;
 }
 
+/* Individual grid item styling */
 .grid-item {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.25);
   padding: 1.5em;
   gap: 2em;
- background-color: #e0dde2;
- color: #2B223D;
+  background-color: #e0dde2;
+  color: #2B223D;
   transition: 0.5s;
   animation: fadeIn 0.5s;
   border-radius: 5px;
-  
 }
 
+/* Hover effect for grid items */
 .grid-item:hover {
   transform: scale(1.03);
 }
 
+/* Image styling within grid items */
 .grid-item img {
   width: 100%;
   height: 180px; /* Adjust height for larger images */
   object-fit: cover;
   border-radius: 10px;
 }
+
+/* Footer styling */
 footer {
-  background-color: #2B223D;
-  color: #e0dde2;
+  background-color: #2B223D; /* Dark background color */
+  color: #e0dde2; /* Light text color */
   padding: 50px 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -113,41 +128,48 @@ footer {
   text-align: center; /* Center-align the content */
 }
 
+/* Footer content styling */
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* Social links list styling */
 .social-links {
   list-style: none; /* Remove default list styles */
   padding: 0;
   margin: 0;
 }
 
+/* Social links list item styling */
 .social-links li {
   display: inline-block; /* Display list items horizontally */
   margin-right: 10px; /* Add some spacing between items */
 }
 
+/* Remove margin from the last social link item */
 .social-links li:last-child {
-  margin-right: 0; /* Remove margin from the last item */
+  margin-right: 0;
 }
 
+/* Social links anchor tag styling */
 .social-links a {
   color: #333; /* Set link color */
   text-decoration: none; /* Remove underline */
 }
 
+/* Hover effect for social links */
 .social-links a:hover {
   text-decoration: underline; /* Add underline on hover */
 }
 
+/* Footer information styling */
 .footer-info span {
   color: #666; /* Set color for copyright text */
 }
 
-
+/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -156,7 +178,8 @@ footer {
     opacity: 1;
   }
 }
-/* Responsive design */
+
+/* Responsive design for grid layout */
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* Two-column layout */
